@@ -20,6 +20,7 @@ public class Main {
         // FIXME: Write the rest of this method!
 
         // 1. Show the day of the week.
+
         HashMap<Integer, String> dayOfWeekNames = DateTools.getDayOfWeekNames();
         int dayOfWeek = date.get(Calendar.DAY_OF_WEEK);
         String dateOfWeek = dayOfWeekNames.get(dayOfWeek);
