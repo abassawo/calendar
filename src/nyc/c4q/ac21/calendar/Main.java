@@ -21,7 +21,14 @@ public class Main {
 
         // 1. Show the day of the week.
         HashMap<Integer, String> dayOfWeekNames = DateTools.getDayOfWeekNames();
-        // ...
+        int dayOfWeek = date.get(Calendar.DAY_OF_WEEK);
+        String dateOfWeek = dayOfWeekNames.get(dayOfWeek);
+        System.out.println("day of week: " + dateOfWeek); //string
+
+        HashMap<Integer, String> monthNames = DateTools.getMonthNames();
+        int month = date.get(Calendar.MONTH);
+        String monthStr = monthNames.get(month);
+        System.out.println("Month is " + monthStr );
 
         // 2. Show whether this is a work day.
         HashMap<Integer, Boolean> workDays = WorkDays.getWorkDays();

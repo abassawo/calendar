@@ -9,10 +9,9 @@ import java.util.HashMap;
 public class DateTools {
     /**
      * Formats a 'Calendar' object as a date.
-     * @param cal
-     *   The object to format.
-     * @return
-     *   The date in "YYYY-MM-DD" format.
+     *
+     * @param cal The object to format.
+     * @return The date in "YYYY-MM-DD" format.
      */
     public static String formatDate(Calendar cal) {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
@@ -21,10 +20,9 @@ public class DateTools {
 
     /**
      * Parses a date in "YYYY-MM-DD" format.
-     * @param date
-     *   The date in "YYYY-MM-DD" format.
-     * @return
-     *   The date it represents, or null if the date is incorrectly formatted.
+     *
+     * @param date The date in "YYYY-MM-DD" format.
+     * @return The date it represents, or null if the date is incorrectly formatted.
      */
     public static Calendar parseDate(String date) {
         if (date.length() == 10 && date.charAt(4) == '-' && date.charAt(7) == '-') {
@@ -59,12 +57,12 @@ public class DateTools {
 
     /**
      * Builds and returns a map from integers representing days of the week to the names of the days of the week.
-     * @return
-     *   A map with keys 'Calendar.MONDAY' through 'Calendar.SUNDAY' with corresponding day names as values.
+     *
+     * @return A map with keys 'Calendar.MONDAY' through 'Calendar.SUNDAY' with corresponding day names as values.
      */
     public static HashMap<Integer, String> getDayOfWeekNames() {
         HashMap<Integer, String> names = new HashMap<Integer, String>();
-        
+
         names.put(Calendar.MONDAY, "Monday");
         names.put(Calendar.TUESDAY, "Tuesday");
         names.put(Calendar.WEDNESDAY, "Wednesday");
@@ -74,12 +72,26 @@ public class DateTools {
         names.put(Calendar.SUNDAY, "Sunday");
 
         return names;
-        return names;
+
     }
 
     public static HashMap<Integer, String> getMonthNames() {
-        // FIXME: Write this.
-        return null;  // Change this!
+        HashMap<Integer, String> monthName = new HashMap<Integer, String>();
+        monthName.put(Calendar.JANUARY, "January");
+        monthName.put(Calendar.FEBRUARY, "February");
+        monthName.put(Calendar.MARCH, "March");
+        monthName.put(Calendar.APRIL, "April");
+        monthName.put(Calendar.MAY, "May");
+        monthName.put(Calendar.JUNE, "June");
+        monthName.put(Calendar.JULY, "July");
+        monthName.put(Calendar.AUGUST, "August");
+        monthName.put(Calendar.SEPTEMBER, "September");
+        monthName.put(Calendar.OCTOBER, "October");
+        monthName.put(Calendar.NOVEMBER, "November");
+        monthName.put(Calendar.DECEMBER, "November");
+        return monthName;
     }
 
 }
+
+
