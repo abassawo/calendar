@@ -77,3 +77,12 @@ We've provided for you:
 Don't hesitate to shout out to @alex or the TAs on Slack if you don't understand the project, or get stuck.
 
 
+### Extra credit
+
+If you would like to extend this farther, consider adding one or more of these items to your calendar:
+
+- season (based on solstice / equinox dates)
+- regular season and playoffs for your favorite sport
+- phase of the moon (Google it!)
+
+
