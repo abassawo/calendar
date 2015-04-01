@@ -92,6 +92,19 @@ public class DateTools {
         return monthName;
     }
 
+    public static HashMap<Integer, Boolean> getWorkDays() {
+        HashMap<Integer,Boolean> workdays  = new HashMap<Integer,Boolean>();
+        workdays.put(Calendar.MONDAY,true);
+        workdays.put(Calendar.TUESDAY,true);
+        workdays.put(Calendar.WEDNESDAY,true);
+        workdays.put(Calendar.THURSDAY,true);
+        workdays.put(Calendar.FRIDAY,true);
+        workdays.put(Calendar.SATURDAY,false);
+        workdays.put(Calendar.SUNDAY,false);
+        return workdays;  // Change this!
+    }
+
+
 }
 
 

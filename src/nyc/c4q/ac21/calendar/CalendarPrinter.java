@@ -1,6 +1,7 @@
 package nyc.c4q.ac21.calendar;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class CalendarPrinter
 {
@@ -27,7 +28,13 @@ public class CalendarPrinter
     public static void printMonthCalendar(Calendar date) {
         // FIXME: Write this.
         // Use these methods to help you:
-        //   DateTools.getMonthNames()
+        //System.out.println(DateTools.getMonthNames());
+        //System.out.println(DateTools.getNextDay(date));
+
+        int month = date.get(Calendar.MONTH);
+        String monthStr = DateTools.getMonthNames().get(month);
+        int year = date.get(Calendar.YEAR);
+        System.out.println("\n" + monthStr + " " + year);
         //   DateTools.getNextDay() to loop through days in the month.
     }
 

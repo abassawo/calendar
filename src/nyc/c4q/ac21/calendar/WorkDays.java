@@ -12,8 +12,14 @@ public class WorkDays {
      *   A map with keys 'Calendar.MONDAY' through 'Calendar.SUNDAY', indicating whether each is a work day.
      */
     public static HashMap<Integer, Boolean> getWorkDays() {
-        // FIXME: Write this.
-        return null;  // Change this!
+        HashMap<Integer,Boolean> workdays  = new HashMap<Integer,Boolean>();
+        workdays.put(Calendar.MONDAY,true);
+        workdays.put(Calendar.TUESDAY,true);
+        workdays.put(Calendar.WEDNESDAY,true);
+        workdays.put(Calendar.THURSDAY,true);
+        workdays.put(Calendar.FRIDAY,true);
+        workdays.put(Calendar.SATURDAY,false);
+        workdays.put(Calendar.SUNDAY,false);
+        return workdays;  // Change this!
     }
-
 }
