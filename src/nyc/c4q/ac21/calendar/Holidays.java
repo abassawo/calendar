@@ -18,7 +18,8 @@ public class Holidays {
      * @return
      *   A map from date to holiday name for holidays.
      */
-    public HashMap<Calendar, String> getHolidays(String holidayType) {
+    public static HashMap<Calendar, String> getHolidays(String holidayType) {
+
         ArrayList<String> lines = FileTools.readLinesFromFile("holidays.csv");
         // Each line is of the form "date,name,type", where "date" is a date
         // in YYYY-MM-DD format, "name" is the holiday name, and "type" is
@@ -32,7 +33,7 @@ public class Holidays {
             String name = values[1];
             String type = values[2];
 
-            if (holidayType.equals(type)) {
+            if (holidayType.equals(type)){
                 Calendar dateCal = DateTools.parseDate(date);
                 //System.out.println(date + " : " + name);
                 holidays.put(dateCal, name);

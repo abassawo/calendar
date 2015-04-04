@@ -25,37 +25,51 @@ public class Main {
         int dayOfWeek = date.get(Calendar.DAY_OF_WEEK);
 
         //System.out.println("Date is " + date.get(Calendar.DATE));
-        String dateOfWeek = dayOfWeekNames.get(dayOfWeek);
+        String dateOfWeek = dayOfWeekNames.get(dayOfWeek);  //First Line 1
         //System.out.println("work day: " +isWorkDay);
         //System.out.println("national holiday: " +isHoliday);
-        System.out.println("day of week: " + "      " + dateOfWeek); //string
+        System.out.println("day of week: " + "      " + dateOfWeek); //string - lINE 2
 
         HashMap<Integer, String> monthNames = DateTools.getMonthNames();
         int month = date.get(Calendar.MONTH);
+        int year = date.get(Calendar.YEAR);
         String monthStr = monthNames.get(month);
-        //System.out.println("Month is " + monthStr );
+
+
 
         // 2. Show whether this is a work day.
         HashMap<Integer, Boolean> workDays = WorkDays.getWorkDays();
-        // ...
+        int workDay_ = date.get(Calendar.DAY_OF_WEEK);  //Repeat of "Day of Week variable to return key from hashmap
+        System.out.println("work day:" + "          " + workDays.get(workDay_));
+
+
 
         // 3. Show whether this is a national holiday, and if so, which.
-        //HashMap<Calendar, String> holidays = Holidays.getHolidays("National holiday");
-        // ...
+        HashMap<Calendar, String> holidays = Holidays.getHolidays("National holiday");
+        System.out.println("National Holiday: " + " " + holidays.get(date));
+
+
+        //int holiDay = date.get(Calendar.DAY_OF_WEEK);
+
+
 
         // 4. Show whether this date is in DST.
-        if (DST.isDST(date)){
-          // TODO  System.out.println(DST.getDSTDates(date);
-        // ...
 
-        // 5. Show the zodiac sign.
+            System.out.println("is DST: " + "           " + DST.isDST(date));
 
-        String zodiacSign = Zodiac.getZodiacSign(date);
-        System.out.println("Zodiac sign" + "        "  + zodiacSign);
-        //
 
-                // 6. Print out the monthly calendar.
-                CalendarPrinter.printMonthCalendar(date);
+            // 5. Show the zodiac sign.
+
+            String zodiacSign = Zodiac.getZodiacSign(date);
+            System.out.println("Zodiac sign" + "        " + zodiacSign);
+            //
+
+            // 6. Print out the monthly calendar.
+            //System.out.println(monthStr + " " + year); //Print Calendar.
+            CalendarPrinter.printMonthCalendar(date);
+
+
 
     }
 }
+//todo: fix workday, nat'l holiday, dst.
